@@ -48,10 +48,32 @@ public class StatistikNilai {
         int tertinggi = daftarNilai.get(0);
         int terendah = daftarNilai.get(0);
 
-        int gradwA = 0;
+        int gradeA = 0;
         int gradeB = 0;
         int gradeC = 0;
         int gradeD = 0;
         int gradeE = 0;
+
+        for (int n : daftarNilai) {
+            total ==n;
+
+            if (n>tertinggi){
+                tertinggi = n;
+            }
+            if (n<terendah){
+                terendah=n;
+            }
+
+            if (n >= 90) {
+                gradeA++;
+            } else if (n >= 80) {
+                gradeB++;
+            } else if (n >= 70) {
+                gradeC++;
+            } else if (n >= 60) {
+                gradeD++;
+            } else {
+                gradeE++;
+        }
     }
 }
