@@ -17,7 +17,7 @@ public class StatistikNilai {
         int nomor = 1;
 
         while (true) {
-            System.out.print("Nilai ke-" + nomor ":");
+            System.out.print("Nilai ke-" + nomor + ":");
             nilai = scanner.nextInt();
 
             if (nilai == SELESAI){
@@ -55,7 +55,7 @@ public class StatistikNilai {
         int gradeE = 0;
 
         for (int n : daftarNilai) {
-            total ==n;
+            total +=n;
 
             if (n>tertinggi){
                 tertinggi = n;
@@ -75,5 +75,28 @@ public class StatistikNilai {
             } else {
                 gradeE++;
         }
+    }
+
+        double rataRata = (double) total / jumlah;
+        int diAtasRataRata = 0;
+        for (int n : daftarNilai) {
+            if (n > rataRata) {
+                diAtasRataRata++;
+            }
+        }
+        System.out.println("Jumlah : " + jumlah);
+        System.out.printf(java.util.Locale.forLanguageTag("id-ID"), "Rata-rata : %.2f%n", rataRata);
+        System.out.println("Tertinggi : " + tertinggi);
+        System.out.println("Terendah : " + terendah);
+        System.out.println("Di atas rata2 : " + diAtasRataRata + " orang");
+        System.out.println("Distribusi : A=" + gradeA + " B=" + gradeB + " C=" + gradeC + " D=" + gradeD + " E=" + gradeE);
+
+        ArrayList<Integer> terurut = new ArrayList<>(daftarNilai);
+        Collections.sort(terurut);
+
+        System.out.println("Terurut : " + terurut);
+        System.out.println("Urutan asli : " + daftarNilai);
+        scanner.close();
+
     }
 }
