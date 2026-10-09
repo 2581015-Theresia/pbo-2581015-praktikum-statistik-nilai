@@ -41,6 +41,17 @@ public class StatistikNilai {
             return;
         }
 
+        System.out.println("Nilai tersimpan :" + daftarNilai);
 
+        int jumlah = daftarNilai.size();
+        int total = 0;
+        int tertinggi = daftarNilai.get(0);
+        int terendah = daftarNilai.get(0);
+
+        int gradwA = 0;
+        int gradeB = 0;
+        int gradeC = 0;
+        int gradeD = 0;
+        int gradeE = 0;
     }
 }
